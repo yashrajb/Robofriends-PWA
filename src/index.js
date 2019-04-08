@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import {createStore, applyMiddleware, combineReducers} from "redux";
 import {search,request} from "./reducers";
-import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from "./container/App";
 import 'tachyons';
@@ -17,7 +16,6 @@ whyDidYouUpdate(React);
 
 const rootReducers = combineReducers({search,request});
 const store = createStore(rootReducers,
- +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 applyMiddleware(thunkMiddleware,logger)
 );
 

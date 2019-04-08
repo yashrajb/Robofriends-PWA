@@ -38,7 +38,7 @@ const mapStateToProps = (state) => {
   return {
    searchField:state.search.searchfield,
    error:state.request.error,
-   robots:state.request.robots,
+   robots:state.search.searchfield?state.request.robots:state.request.robots.slice(0,4),
    pending:state.request.pending
   }
 }
